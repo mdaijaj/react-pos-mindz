@@ -1,0 +1,96 @@
+@import "../../../variable.scss";
+.customerMasterBox {
+  @extend .tabViewBox;
+  margin-bottom: 15px;
+  .customerMasterSection {
+    display: block;
+    padding: 0px 15px;
+    .autoComp {
+      .formBox {
+        @extend .inputBox;
+        .MuiInput-formControl {
+          padding-right: inherit;
+          &::before {
+            display: none !important;
+          }
+          &::after {
+            display: none !important;
+          }
+          .MuiAutocomplete-input {
+            box-sizing: border-box;
+          }
+        }
+      }
+    }
+    .boxTitle {
+      display: block;
+      @extend .titleFont;
+      margin-bottom: 20px;
+      margin-top: 5px;
+    }
+    .box {
+      padding: 25px 15px;
+      margin-bottom: 15px;
+      &.greyBg {
+        background-color: $lightBg;
+        @include border-radius(4px);
+      }
+      .formBox {
+        @extend .inputBox;
+        position: relative;
+        .react-datepicker-wrapper {
+          width: 100%;
+        }
+        select.react-datepicker__year-select {
+          height: 25px;
+          padding: 4px 15px;
+        }
+        .calIcon {
+          position: absolute;
+          right: 13px;
+          top: 45px;
+          z-index: 9;
+          pointer-events: none;
+        }
+        .errorShow {
+          position: absolute;
+          bottom: -18px;
+          font-size: 0.8rem;
+          color: #f00;
+          left: 0px;
+        }
+        &.mb-0 {
+          margin-bottom: 0px;
+        }
+        textarea {
+          margin: 0px;
+          width: 100%;
+          height: 70px;
+          border: solid 1px #186bac;
+          border-radius: 5px;
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
+          -o-border-radius: 5px;
+          outline: none;
+          outline: none;
+          font-size: 1.2rem;
+          padding: 10px 19px;
+          resize: none;
+        }
+        .streettextarea {
+          height: 45px;
+          width: 100%;
+          border: solid 1px #e1e1e1;
+          transition: 0.6s;
+        }
+        .streettextarea:focus {
+          box-shadow: 0 0 4px #5d5d68;
+        }
+      }
+    }
+    .autocodeerror {
+      border: solid 1px #ff6161;
+      border-radius: 5px;
+    }
+  }
+}

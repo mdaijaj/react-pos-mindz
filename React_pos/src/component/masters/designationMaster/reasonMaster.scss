@@ -1,0 +1,65 @@
+@import "../../../variable.scss";
+
+.customerMasterBox {
+  @extend .tabViewBox;
+  .reasonMasterSection {
+    .box {
+      padding: 25px 15px;
+      margin-bottom: 15px;
+      &.greyBg {
+        background-color: $lightBg;
+        @include border-radius(4px);
+      }
+    }
+    display: block;
+    padding: 0px 15px;
+    .formBox {
+      @extend .inputBox;
+      input {
+        &::placeholder {
+          font-size: 0.8rem;
+          color: #727070;
+        }
+      }
+      
+      margin-bottom: 25px;
+      &.mb-0 {
+        margin-bottom: 0px;
+      }
+    }
+    .formBox {
+      @extend .inputBox;
+      margin-bottom: 25px;
+      .MuiInput-formControl {
+        padding-right: inherit;
+        &::before {
+          display: none !important;
+        }
+        &::after {
+          display: none !important;
+        }
+        .MuiAutocomplete-input {
+          box-sizing: border-box;
+          background-color: #fff;
+        }
+      }
+    }
+
+    .MuiAutocomplete-inputRoot[class*="MuiInput-root"]
+      .MuiAutocomplete-input:first-child {
+      padding: 6px 10px;
+    }
+    .editBtn {
+      background-color: #1dd46b;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-right: 5px;
+      margin-top: 40px;
+      outline: none;
+      margin-bottom: 10px;
+    }
+  }
+}

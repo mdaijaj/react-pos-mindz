@@ -1,0 +1,321 @@
+$font-regular: TTNormsRegular;
+$font-bold: TTNormsBold;
+$font-light: TTNormsLight;
+$font-medium: TTNormsMedium;
+$input-border-color: #e1e1e1;
+$dark-blue: #055585;
+$light-blue: #2567c0;
+$menuDefaultColor: #113f72;
+$btnBgGreen: #1dd46b;
+$textBlue: #2065b8;
+$lightBg: #fafafa;
+$tableHeadBg: #1a5f9e;
+$lightBlueBg: #f7fcff;
+$btnRed: #ff6161;
+$btnDarkBlue: #113f72;
+$btnBlue: #186bac;
+
+@mixin border-radius($border-radius) {
+  border-radius: $border-radius;
+  -webkit-border-radius: $border-radius;
+  -moz-border-radius: $border-radius;
+  -o-border-radius: $border-radius;
+}
+@mixin box-shadow($boxShadow) {
+  box-shadow: $boxShadow;
+  -moz-box-shadow: $boxShadow;
+  -webkit-box-shadow: $boxShadow;
+  -o-box-shadow: $boxShadow;
+}
+@mixin transition($transition) {
+  transition: $transition;
+  -moz-transition: $transition;
+  -webkit-transition: $transition;
+  -o-transition: $transition;
+}
+@mixin rotate($rotate) {
+  transform: rotate($rotate);
+  -moz-transform: rotate($rotate);
+  -webkit-transform: rotate($rotate);
+  -o-transform: rotate($rotate);
+}
+@mixin transform($transform) {
+  transform: $transform;
+  -moz-transform: $transform;
+  -webkit-transform: $transform;
+  -o-transform: $transform;
+}
+.greenPlayBtn {
+  position: relative;
+  @include border-radius(80%);
+  background-color: $btnBgGreen;
+  @include box-shadow(2px 11px 15px -5px #d0cfcf);
+  &::after {
+    content: "";
+    position: absolute;
+    border-left: solid 9px #fff;
+    border-top: solid 6px transparent;
+    border-bottom: solid 6px transparent;
+    top: 50%;
+    left: 50%;
+    @include transform(translate(-36%, -50%));
+  }
+}
+
+.tabViewBox {
+  float: left;
+  width: 100%;
+  border: solid 1px #e1e1e1;
+  margin-top: 0rem;
+  border-radius: 0px 10px 10px 10px;
+}
+.inputBox {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-bottom: 10px;
+  label {
+    // // display: block;
+    // @include border-radius(4px 4px 0px 0px);
+    font-size: 0.8rem;
+    // position: absolute;
+    // background-color: #fff;
+    padding: 3px 10px 0px;
+    // z-index: 9;
+    // left:10px;
+    // top: -11px;
+    color: rgb(104, 104, 104);
+    pointer-events: none;
+    span.required {
+      color: red;
+      font-size: larger;
+      position: relative;
+      margin-left: 3px;
+      top: 0px;
+      line-height: 1px;
+    }
+  }
+  input {
+    width: 100%;
+    outline: none;
+    padding: 5px 15px;
+    @include border-radius(5px);
+    border: solid 1px $input-border-color;
+    height: 38px;
+    &.required {
+      border: solid 1px #f00;
+    }
+    &.error {
+      border: solid 1px $btnRed;
+    }
+  }
+  select {
+    width: 100%;
+    border: solid 1px $input-border-color;
+    outline: none;
+    padding: 5px 15px;
+    @include border-radius(5px);
+    height: 38px;
+    &.required {
+      border: solid 1px #f00;
+    }
+    &.error {
+      border: solid 1px $btnRed;
+    }
+  }
+  .calIcon {
+    position: absolute;
+    right: 13px;
+    top: 27px;
+    z-index: 9;
+    pointer-events: none;
+  }
+  .CalenderForm {
+    position: absolute;
+    right: 25px;
+    top: 27px;
+    z-index: 9;
+    pointer-events: none;
+  }
+}
+.checkboxNew {
+  label {
+    border: solid 1px $input-border-color;
+    color: #adadad;
+    @include border-radius(25px);
+    white-space: nowrap;
+    margin: 3px 0px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: all 0.2s;
+    padding: 8px 35px !important;
+    cursor: pointer;
+    position: relative;
+    color: #1d1d1d;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 18px;
+      width: 18px;
+      border: solid 1px $input-border-color;
+      @include border-radius(4px);
+      left: 10px;
+      background-color: #e6e6e6;
+    }
+  }
+  input {
+    position: absolute;
+    height: 1.2rem;
+    left: 8px;
+    top: 1rem;
+    width: 1.2rem;
+    &[type="checkbox"] {
+      display: none;
+    }
+
+    &[type="checkbox"] {
+      + label,
+      &:not(checked) + label {
+        padding: 8px 45.5px;
+        border: solid 1px $input-border-color;
+        @include border-radius(25px);
+        font-size: 1rem;
+        margin-right: 31px;
+        transition: 0.4s;
+      }
+    }
+
+    &[type="radio"]:checked + label,
+    &[type="checkbox"]:checked + label {
+      position: relative;
+      border: solid 1px $input-border-color;
+      background: #1dd46b;
+      color: #fff;
+      transition: 0.4s;
+    }
+    :checked + label::after,
+    &[type="checkbox"]:checked + label::after {
+      content: "✔";
+      position: absolute;
+      left: 16px;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    :checked + label::before,
+    &[type="checkbox"]:checked + label::before {
+      display: none;
+    }
+  }
+}
+.titleFont {
+  font-size: 18px;
+  font-weight: 700;
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 15px 0px;
+  padding: 0px;
+  @include border-radius(10px 10px 0px 0px);
+  thead {
+    background-color: $tableHeadBg;
+    color: #fff;
+    th {
+      font-weight: 500;
+      padding: 10px 10px;
+      //font-size: 1rem;
+      border-right: solid 1px #e6e6e6;
+      // white-space: nowrap;
+      font-size: 0.8rem;
+      &:last-child {
+        border-right: none;
+        @include border-radius(0px 8px 0px 0px);
+      }
+      &:first-child {
+        @include border-radius(8px 0px 0px 0px);
+      }
+    }
+  }
+  tbody {
+    tr {
+      &:nth-child(even) {
+        background-color: #f7fcff;
+      }
+      &.selected {
+        background-color: #c6ffde;
+      }
+      td {
+        padding: 3px 10px;
+        border-right: solid 1px #e6e6e6;
+        border-bottom: solid 1px #e6e6e6;
+        font-size: 0.75rem;
+        height: 35px;
+        &:first-child {
+          border-left: solid 1px #e6e6e6;
+        }
+        input[type="checkbox"] {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+}
+.modalPopUp {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  left: 0px;
+  top: 0px;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 99;
+  .modalPopUPin {
+    margin: auto auto;
+    padding: 15px 15px;
+    background-color: #fff;
+    max-width: 90%;
+    max-height: 90%;
+    overflow-y: auto;
+  }
+}
+button.closebtn {
+  background: none;
+  border: none;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 7px;
+  right: 6px;
+  outline: none;
+  cursor: pointer;
+  &::after {
+    content: "";
+    width: 2px;
+    height: 15px;
+    top: 5px;
+    left: 50%;
+    margin-left: -1px;
+    position: absolute;
+    background-color: $btnRed;
+    @include rotate(-45deg);
+  }
+  &::before {
+    content: "";
+    width: 2px;
+    height: 15px;
+    top: 5px;
+    left: 50%;
+    margin-left: -1px;
+    position: absolute;
+    background-color: $btnRed;
+    @include rotate(45deg);
+  }
+}

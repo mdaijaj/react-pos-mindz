@@ -1,0 +1,47 @@
+@import "../../../variable.scss";
+
+.customerMasterBox {
+  .salePersonMaster {
+    .box {
+      padding: 25px 15px;
+      margin-bottom: 15px;
+      &.greyBg {
+        background-color: $lightBg;
+        @include border-radius(4px);
+      }
+    }
+    display: block;
+    padding: 0px 15px;
+    // .formBox {
+    //   @extend .inputBox;
+    //   ::placeholder {
+    //     font-size: 0.6rem;
+    //     color: #9f9f9f;
+    //   }
+    //   margin-bottom: 25px;
+    //   &.mb-0 {
+    //     margin-bottom: 0px;
+    //   }
+    // }
+    .formBox {
+      @extend .inputBox;
+      .MuiAutocomplete-inputRoot[class*="MuiInput-root"]
+        .MuiAutocomplete-input:first-child {
+        padding: 6px 10px;
+      }
+      .MuiInput-formControl {
+        padding-right: inherit;
+        &::before {
+          display: none !important;
+        }
+        &::after {
+          display: none !important;
+        }
+        .MuiAutocomplete-input {
+          box-sizing: border-box;
+          background-color: #fff;
+        }
+      }
+    }
+  }
+}

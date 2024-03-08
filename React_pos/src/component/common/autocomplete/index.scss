@@ -1,0 +1,22 @@
+.autocomplete {
+  position: relative;
+}
+.optionList {
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px #ccc;
+  background-color: #fff;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 200px;
+  z-index: 9999;
+  ul {
+    margin: 0px;
+    padding: 0px;
+    li {
+      padding: 8px 15px;
+      &:hover {
+        background-color: #efefef;
+      }
+    }
+  }
+}

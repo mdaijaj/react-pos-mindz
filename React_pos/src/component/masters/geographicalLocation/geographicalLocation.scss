@@ -1,0 +1,29 @@
+@import "../../../variable.scss";
+.geographicalLocationBox {
+  @extend .tabViewBox;
+  .geographicalLocation {
+    display: block;
+    padding: 0px 15px;
+    margin-bottom: 25px;
+    .boxTitle {
+      @extend .titleFont;
+      margin-bottom: 15px;
+    }
+    .formBox {
+      @extend .inputBox;
+      margin-bottom: 15px;
+    }
+    .tableBox {
+      table {
+        @extend .table;
+        margin:0px;
+        th {
+          text-align: left;
+        }
+      }
+    }
+  }
+  .editBtn {
+    display: none;
+  }
+}

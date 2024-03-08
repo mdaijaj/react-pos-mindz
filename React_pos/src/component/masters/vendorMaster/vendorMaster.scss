@@ -1,0 +1,36 @@
+@import "../../../variable.scss";
+.vendorMasterBox {
+  @extend .tabViewBox;
+  margin-bottom: 15px;
+  .vendorMasterSection {
+    display: block;
+    padding: 0px 15px;
+    .countryCode {
+      .formBox {
+        @extend .inputBox;
+        margin-bottom: 25px;
+      }
+    }
+    .boxTitle {
+      display: block;
+      @extend .titleFont;
+      margin-bottom: 20px;
+      margin-top: 5px;
+    }
+    .box {
+      padding: 25px 15px;
+      margin-bottom: 15px;
+      &.greyBg {
+        background-color: $lightBg;
+        @include border-radius(4px);
+      }
+      .formBox {
+        @extend .inputBox;
+        margin-bottom: 25px;
+        &.mb-0 {
+          margin-bottom: 0px;
+        }
+      }
+    }
+  }
+}

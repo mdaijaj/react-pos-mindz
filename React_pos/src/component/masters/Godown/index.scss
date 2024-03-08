@@ -1,0 +1,33 @@
+@import "../../../variable.scss";
+.godownMaster{
+    .box{
+        padding: 10px 15px;
+        margin-bottom: 15px;
+        .formBox{
+            @extend .inputBox;
+            .MuiInput-formControl {
+                padding-right: inherit;
+                &::before {
+                  display: none !important;
+                }
+                &::after {
+                  display: none !important;
+                }
+                .MuiAutocomplete-input {
+                  box-sizing: border-box;
+                  background-color: #fff;
+                }
+              }
+              .MuiAutocomplete-inputRoot[class*="MuiInput-root"]
+              .MuiAutocomplete-input:first-child {
+              padding: 6px 10px;
+            }
+            .checkboxNew {
+                padding-top: 26px;
+                input + label {
+                  pointer-events: inherit;
+                }
+              }
+        }
+    }
+}

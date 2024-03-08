@@ -1,0 +1,94 @@
+@import "../../../variable.scss";
+.stockGeneral {
+  @extend .tabViewBox;
+  .stockGeneralIn {
+    padding: 0px 15px;
+    .boxTitle {
+      display: block;
+      @extend .titleFont;
+      margin-bottom: 20px;
+      margin-top: 5px;
+    }
+    .box {
+      padding: 25px 15px;
+      margin-bottom: 15px;
+      &.greyBg {
+        background-color: $lightBg;
+        @include border-radius(4px);
+        &.borderBottom-0 {
+          @include border-radius(4px 4px 0px 0px);
+        }
+      }
+
+      .formBox {
+        @extend .inputBox;
+        position: relative;
+        // .calIcon {
+        //   position: absolute;
+        //   right: 13px;
+        //   top: 45px;
+        //   z-index: 9;
+        //   pointer-events: none;
+        // }
+        &.mb-0 {
+          margin-bottom: 0px;
+        }
+        .react-datepicker-wrapper {
+          width: 100%;
+        }
+      }
+
+      .formBox {
+        @extend .inputBox;
+        .MuiInput-formControl {
+          padding-right: inherit;
+          &::before {
+            display: none !important;
+          }
+          &::after {
+            display: none !important;
+          }
+          .MuiAutocomplete-input {
+            box-sizing: border-box;
+            background-color: #fff;
+          }
+        }
+      }
+      &.blueBg {
+        background-color: $btnBlue;
+        @include border-radius(4px);
+        &.borderTop-0 {
+          @include border-radius(0px 0px 4px 4px);
+        }
+        .formBox {
+          label {
+            color: #fff;
+          }
+          input {
+            border: solid 1px #fff;
+            background: none;
+            color: #fff;
+            &.bgWhite {
+              background: #fff;
+              color: #444;
+            }
+          }
+        }
+      }
+    }
+    .tableBox {
+      table {
+        @extend .table;
+      }
+    }
+  }
+  .MuiAutocomplete-hasPopupIcon.MuiAutocomplete-hasClearIcon
+    .MuiAutocomplete-inputRoot {
+    padding-right: 5px;
+  }
+  .MuiAutocomplete-inputRoot .MuiAutocomplete-input {
+    width: 0;
+    min-width: 80%;
+    height: 30px;
+  }
+}

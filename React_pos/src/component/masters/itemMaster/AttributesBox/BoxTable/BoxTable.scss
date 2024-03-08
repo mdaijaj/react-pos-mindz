@@ -1,0 +1,39 @@
+@import '../../../../../variable.scss';
+
+.customersTable{
+    float: left;
+    width: 100%;
+    
+.table{
+    width: 100%;
+    float: left;
+    // border: solid 1px $input-border-color;
+    @include border-radius(4px);
+   
+    tr{
+        
+        &:nth-child(even){
+            background-color: #f7fcff;
+        }
+        td{
+      height: 33px;
+      text-align: center;
+ 
+            
+       
+        }
+        th{
+          color: #fff;
+          font-weight: 400;
+          line-height: 33px;
+          font-size: 0.8rem;
+    line-height: 33px;
+    padding: 5px 5px;
+     
+     
+       
+        }
+    }
+}
+   
+}

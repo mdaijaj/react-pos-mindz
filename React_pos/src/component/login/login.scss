@@ -1,0 +1,238 @@
+@import "../../variable.scss";
+.loginContainer {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom right, $dark-blue, $light-blue);
+  font-family: $font-regular;
+  .loginBg {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(../../images/loginBg.png);
+    background-size: cover;
+    padding: 0px 25px;
+    position: relative;
+    .loginLogo {
+      width: 100%;
+      padding: 25px 40px;
+      img {
+        max-width: 220px;
+      }
+      .deleteDb {
+        float: right;
+        background-color: #fff;
+        outline: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        border: none;
+        @include border-radius(8px);
+      }
+    }
+    .loginBox {
+      width: 38%;
+      max-width: 400px;
+      min-width: 250px;
+      height: 57%;
+      min-height: 350px;
+      background-color: #fff;
+      margin: auto auto;
+      @include border-radius(15px);
+      padding: 20px 30px;
+      @include transition(height 0.3s);
+      @include box-shadow(4px 26px 14px -19px #0d4686);
+      .error {
+        color: red;
+        font-size: 1rem;
+        padding: 0px 0px 15px;
+        margin: 0;
+      }
+      .loginTitle {
+        text-align: center;
+        font-size: 1.5rem;
+        font-family: $font-bold;
+        padding: 10px 0px;
+      }
+      .loginFormBox {
+        width: 100%;
+        margin-top: 20px;
+        .loginForm {
+          width: 100%;
+          margin-bottom: 10px;
+          input {
+            width: 100%;
+            border: solid 1px $input-border-color;
+            height: 50px;
+            @include border-radius(5px);
+            outline: none;
+            padding: 15px 20px;
+            font-family: $font-regular;
+            font-size: 1rem;
+            font-style: italic;
+            &::placeholder {
+              color: black;
+            }
+            &.typeCheck {
+              display: none;
+              & + label {
+                padding-left: 30px;
+                cursor: pointer;
+                position: relative;
+                color: #0e0c0e;
+                &::before {
+                  content: "";
+                  position: absolute;
+                  width: 20px;
+                  height: 20px;
+                  border: solid 1px $input-border-color;
+                  left: 0;
+                  @include border-radius(4px);
+                  @include transition(0.3s);
+                }
+                &::after {
+                  content: "";
+                  position: absolute;
+                  width: 10px;
+                  height: 4px;
+                  border-left: solid 2px #fff;
+                  border-bottom: solid 2px #fff;
+                  left: 5px;
+                  top: 6px;
+                  @include rotate(-45deg);
+                  opacity: 0;
+                }
+              }
+              &:checked + label::before {
+                background-color: #1a61ac;
+                border: solid 1px transparent;
+              }
+              &:checked + label::after {
+                opacity: 1;
+              }
+            }
+          }
+          .field-icon {
+            float: right;
+            margin-top: -35px;
+            position: relative;
+            z-index: 2;
+            padding: 0 6px;
+          }
+          button {
+            width: 100%;
+            background-image: linear-gradient($dark-blue, $light-blue);
+            color: #fff;
+            border: none;
+            height: 50px;
+            @include border-radius(5px);
+            outline: none;
+            cursor: pointer;
+            position: relative;
+            &:hover {
+              background-image: linear-gradient($light-blue, $dark-blue);
+            }
+            &::after {
+              content: "";
+              position: absolute;
+              width: 5px;
+              height: 5px;
+              border-right: solid 1px #fff;
+              border-bottom: solid 1px #fff;
+              right: 20px;
+              top: 50%;
+              margin-top: -2.5px;
+              @include rotate(-45deg);
+            }
+            &:disabled {
+              background-image: linear-gradient(#536da5, #5187d8);
+              cursor: not-allowed;
+            }
+          }
+          &.mb-25 {
+            margin-bottom: 25px;
+          }
+          &.mb-15 {
+            margin-bottom: 15px;
+          }
+        }
+      }
+      &.force {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 57%;
+        min-height: 250px;
+        .loginforce {
+          display: block;
+          .msgDiv {
+            color: #f00;
+            padding: 25px 0px;
+          }
+          .btnDiv {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .lff_btn {
+              background-image: linear-gradient($dark-blue, $light-blue);
+              color: #fff;
+              border: none;
+              padding: 10px 20px;
+              @include border-radius(5px);
+              outline: none;
+              cursor: pointer;
+              position: relative;
+              margin-right: 8px;
+              &.Cancel {
+                background-image: linear-gradient(#444, #222);
+              }
+            }
+          }
+        }
+      }
+    }
+    .loginFooter {
+      height: 60px;
+      border-top: solid 1px #72a2c4;
+      color: #fff;
+      position: absolute;
+      bottom: 0;
+      width: calc(100% - 50px);
+      font-size: 0.95rem;
+      font-family: $font-light;
+      padding: 20px 0;
+      display: flex;
+      .footerMail {
+        margin: 0px 40px 0px 30px;
+        img {
+          float: left;
+          width: 18px;
+          margin-right: 5px;
+        }
+      }
+      .footerNo {
+        margin: 0px 40px 0px 40px;
+        img {
+          float: left;
+          width: 18px;
+          margin-right: 5px;
+        }
+      }
+      .copyRight {
+        margin-left: auto;
+        margin-right: 30px;
+      }
+    }
+  }
+  .forgotpass {
+    text-align: right;
+    .forgotpassLink {
+      cursor: pointer;
+      background: none;
+      border: none;
+      margin-left: auto;
+      color: #1bb1f5;
+      &.disable {
+        color: #dadada;
+        cursor: inherit;
+      }
+    }
+  }
+}

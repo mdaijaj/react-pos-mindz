@@ -1,0 +1,59 @@
+@import "../../../variable.scss";
+.tabBox {
+  @extend .tabViewBox;
+  .unitMaster {
+    float: left;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    .marg {
+      @extend .inputBox;
+      margin-bottom: 25px;
+      .MuiInput-formControl {
+        padding-right: inherit;
+        &::before {
+          display: none !important;
+        }
+        &::after {
+          display: none !important;
+        }
+        .MuiAutocomplete-input {
+          box-sizing: border-box;
+          background-color: #fff;
+          padding: 2px;
+        }
+      }
+    }
+
+    .marg {
+      width: 33.33%;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    label {
+      font-size: 0.9rem;
+      color: #1d1d1d;
+      float: left;
+      width: 100%;
+      margin-bottom: 0.5rem;
+    }
+    input {
+      position: relative;
+      width: 100%;
+      border: solid 1px $input-border-color;
+      height: 45px;
+      @include border-radius(4px);
+      outline: none;
+      padding: 15px 20px;
+      font-family: $font-regular;
+      font-size: 1rem;
+      // @include box-shadow(0 0 12px #cccccc8f);
+      &:focus {
+        box-shadow: 0 0 5px rgba(26, 95, 158, 1);
+
+        border: 1px solid rgba(26, 95, 158, 1);
+        transition: 1s;
+      }
+    }
+  }
+}

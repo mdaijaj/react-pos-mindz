@@ -1,0 +1,361 @@
+@import "../../../variable.scss";
+.tabBox {
+    @extend .tabViewBox;
+}
+
+.billSection {
+  display: block;
+  padding: 0px 15px;
+
+  .box {
+    width: 100%;
+    padding: 20px 20px;
+    &.grayBg {
+      background-color: $lightBg;
+      @include border-radius(5px);
+    }
+
+    .formBox {
+      @extend .inputBox;
+      .react-datepicker-wrapper {
+        width: 100%;
+      }
+    }
+    .autoComp {
+      .formBox {
+        @extend .inputBox;
+        .MuiInput-formControl {
+          padding-right: inherit;
+          &::before {
+            display: none !important;
+          }
+          &::after {
+            display: none !important;
+          }
+          .MuiAutocomplete-input {
+            box-sizing: border-box;
+            min-height: 38px;
+            background-color: #fff;
+          }
+        }
+      }
+      &.billno {
+        .formBox {
+          .MuiInput-formControl {
+            .MuiAutocomplete-input {
+              min-height: 38px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .billOption {
+    display: block;
+    button {
+      background-color: $btnBgGreen;
+      color: #fff;
+      border: none;
+      @include border-radius(5px);
+      outline: none;
+      display: block;
+      width: 100%;
+      cursor: pointer;
+    }
+    .left > button {
+      padding: 14px 10px 14px 15px;
+      margin: 0px 0px 10px;
+      text-align: left;
+      &:last-child {
+        margin: 0px;
+      }
+    }
+    .right > button {
+      padding: 7px 15px 7px 25px;
+      margin: 0px 0px 5px;
+      text-align: left;
+    }
+  }
+}
+.amountDetail {
+  display: block;
+  padding: 8px 10px 0px 0px;
+  table {
+    width: 100%;
+    tr {
+      td {
+        font-size: 0.8rem;
+        padding: 5px 0px;
+        input {
+          max-width: 50px;
+          text-align: center;
+        }
+        &:first-child {
+          color: rgb(141, 141, 141);
+          width: 44%;
+        }
+        &:last-child {
+          text-align: right;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+.privInvoiceDetail {
+  display: block;
+  width: 100%;
+  background-color: $lightBlueBg;
+  padding: 15px 10px;
+  margin-top: 10px;
+  .title {
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  table {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    border-collapse: collapse;
+    color: #1d1d1d;
+    tr {
+      border-bottom: solid 1px #e4eef5;
+      td {
+        font-size: 0.8rem;
+        padding: 10px 5px 10px;
+        //width: 100px;
+        &.lbl {
+          color: #9f9f9f;
+          // width: 115px;
+        }
+      }
+    }
+  }
+}
+.curInvoiceDetail {
+  display: block;
+  width: 100%;
+  background-color: $lightBg;
+  padding: 20px 20px;
+  .title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+  table {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    border-collapse: collapse;
+    color: #1d1d1d;
+    tr {
+      td {
+        font-size: 0.85rem;
+        padding: 2px 0px 2px;
+        &:nth-child(1),
+        &:nth-child(3) {
+          font-weight: 600;
+        }
+        input {
+          width: 100px;
+          border: solid 1px $input-border-color;
+          padding: 8px 10px;
+          @include border-radius(5px);
+          outline: none;
+        }
+      }
+    }
+  }
+}
+.invoiceAction {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+
+  button {
+    color: #fff;
+    height: 45px;
+    margin: 0px 5px;
+    width: 100%;
+    border: none;
+    @include border-radius(4px);
+    cursor: pointer;
+    outline: none;
+    &.green {
+      background-color: $btnBgGreen;
+    }
+    &.darkBlue {
+      background-color: $btnDarkBlue;
+    }
+    &.red {
+      background-color: $btnRed;
+    }
+    &.blue {
+      background-color: $btnBlue;
+    }
+    &.grey {
+      background-color: #9f9f9f;
+    }
+    &.billinfoBtn {
+      background-color: $btnDarkBlue;
+    }
+    &.taxinfoBtn {
+      background-color: $btnDarkBlue;
+    }
+    &.lotbatchBtn {
+      background-color: $btnDarkBlue;
+    }
+  }
+}
+.RemarkForm {
+  @extend .inputBox;
+  label {
+    margin-bottom: 0px;
+  }
+  textarea {
+    width: 100%;
+    border: solid 1px #186bac;
+    @include border-radius(5px);
+    outline: none;
+    outline: none;
+    font-size: 1.2rem;
+    padding: 10px 19px;
+    resize: none;
+    height: 80px;
+    &::placeholder {
+      color: #9f9f9f;
+    }
+  }
+}
+.tableView {
+  @extend .table;
+  input {
+    border: solid 1px #e1e1e1;
+    // max-width: 50px;
+    padding: 5px 5px;
+    text-align: center;
+    outline: none;
+    min-width: 80px;
+  }
+  thead {
+    th {
+      &:first-child {
+        min-width: 180px;
+      }
+    }
+  }
+}
+.voucherPop {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  left: 0px;
+  top: 0px;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 99;
+  .voucherPopin {
+    margin: auto auto;
+    background-color: #fff;
+    max-width: 90%;
+    max-height: 90%;
+    overflow: hidden;
+    @include border-radius(5px);
+    h3 {
+      margin: 0px;
+      padding: 10px 15px;
+      background-color: #186bac;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 500;
+      min-width: 240px;
+      @include border-radius(5px 5px 0px 0px);
+    }
+    ul {
+      margin: 0px;
+      padding: 0px;
+      list-style-type: none;
+      li {
+        padding: 8px 10px;
+        border-bottom: solid 1px #eaeaea;
+      }
+    }
+  }
+}
+.rightOverlaySec {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 100vh;
+  z-index: 99;
+
+  .title {
+    display: block;
+    border-bottom: solid 1px #efefef;
+    padding: 10px 10px;
+  }
+  .BillingInfo {
+    display: block;
+    width: 450px;
+    background: #fff;
+    height: 100vh;
+    margin-left: auto;
+    box-shadow: 0px 0px 10px 2px #2b2b2b;
+  }
+  .taxInfo {
+    display: block;
+    width: 350px;
+    background: #fff;
+    height: 100vh;
+    margin-left: auto;
+    box-shadow: 0px 0px 10px 2px #2b2b2b;
+    .taxinfoD {
+      padding: 10px 10px;
+      font-size: 0.8rem;
+      table {
+        width: 100%;
+        td {
+          padding: 4px 0px;
+          input {
+            width: 80px;
+          }
+        }
+      }
+    }
+  }
+}
+.billingInfoD {
+  display: block;
+  padding: 10px 10px;
+  h4 {
+    margin: 0px;
+    padding: 8px 0;
+    font-weight: 500;
+    font-size: 0.9rem;
+  }
+  .formbox {
+    display: flex;
+    align-items: center;
+    @extend .inputBox;
+    label {
+      width: 40%;
+    }
+    input {
+      width: 60%;
+    }
+    select {
+      width: 60%;
+    }
+  }
+}
+.cancelsts {
+  display: block;
+  color: #f00;
+  text-align: left;
+  font-weight: bold;
+  font-size: 1.2rem;
+}

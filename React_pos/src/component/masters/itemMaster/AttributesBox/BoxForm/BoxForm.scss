@@ -1,0 +1,53 @@
+@import "../../../../../variable.scss";
+.InexclusiveCheck {
+  margin-bottom: 1rem;
+  margin-top: -0.7rem;
+  .MuiTypography-body1 {
+    font-size: 0.8rem;
+}
+}
+
+.BoxForm {
+  float: left;
+  width: 100%;
+
+ 
+
+  .CalenderForm {
+    position: absolute;
+    top: 46px;
+    right: 30px;
+    background: #fff;
+    pointer-events: none;
+  }
+  .FormNumber {
+    float: left;
+    width: 50%;
+    padding: 0px 14px;
+    margin-left: -13px;
+    margin-right: 13px;
+    @extend .inputBox;
+    .react-datepicker-wrapper {
+      width: 100%;
+    }
+    input {
+      margin-bottom: 1rem;
+    }
+
+    select {
+      position: relative;
+      width: 100%;
+      height: 45px;
+      border: solid 1px $input-border-color;
+      @include border-radius(4px);
+      outline: none;
+      padding: 6px 6px;
+      font-family: TTNormsRegular;
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+  .MuiTypography-body1 {
+    font-size: 0.8rem;
+  }
+}

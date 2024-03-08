@@ -1,0 +1,42 @@
+.forgotPassDiv {
+  .message_f {
+    &.error {
+      color: #f00;
+      padding-bottom: 0px !important;
+    }
+    &.success {
+      text-align: center;
+      padding: 5px 0px 20px;
+      font-size: 13px;
+      color: #2aaf34;
+    }
+  }
+  .loginFormBox {
+    margin-top: 10px !important;
+    .loginForm {
+      &.error {
+        padding-bottom: 0px;
+        input {
+          border: solid 1px #f00 !important;
+        }
+      }
+    }
+  }
+  .validtime {
+    text-align: center;
+    padding: 22px 0 0;
+    color: #969696;
+    font-size: 13px;
+    span {
+      margin-left: 8px;
+      width: 48px;
+      display: inline-block;
+    }
+  }
+}
+.loginForm.disable {
+  button {
+    background-image: linear-gradient(#f3f3f3, #c7c7c7) !important;
+    cursor: inherit !important;
+  }
+}

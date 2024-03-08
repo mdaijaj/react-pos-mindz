@@ -1,0 +1,109 @@
+@import "../../../variable.scss";
+.inward {
+  @extend .tabViewBox;
+  .inwardIn {
+    padding: 0px 15px;
+    .autoComp {
+      .formBox {
+        @extend .inputBox;
+        .MuiInput-formControl {
+          padding-right: inherit;
+          &::before {
+            display: none !important;
+          }
+          &::after {
+            display: none !important;
+          }
+          .MuiAutocomplete-input {
+            box-sizing: border-box;
+            background-color: #fff;
+          }
+        }
+        &.error {
+          input {
+            border: solid 1px #ff0000;
+          }
+        }
+      }
+    }
+    .boxTitle {
+      display: block;
+      @extend .titleFont;
+      margin-bottom: 20px;
+      margin-top: 5px;
+    }
+    .box {
+      padding: 25px 15px;
+      margin-bottom: 15px;
+      &.greyBg {
+        background-color: $lightBg;
+        @include border-radius(4px);
+        &.borderBottom-0 {
+          @include border-radius(4px 4px 0px 0px);
+        }
+      }
+
+      .formBox {
+        @extend .inputBox;
+        position: relative;
+        .react-datepicker-wrapper {
+          width: 100%;
+        }
+        // .calIcon {
+        //   position: absolute;
+        //   right: 13px;
+        //   top: 45px;
+        //   z-index: 9;
+        //   pointer-events: none;
+        // }
+        &.mb-0 {
+          margin-bottom: 0px;
+        }
+        .MuiInput-formControl {
+          padding-right: inherit;
+          &::before {
+            display: none !important;
+          }
+          &::after {
+            display: none !important;
+          }
+          .MuiAutocomplete-input {
+            box-sizing: border-box;
+          }
+        }
+      }
+      &.blueBg {
+        background-color: $btnBlue;
+        @include border-radius(4px);
+        &.borderTop-0 {
+          @include border-radius(0px 0px 4px 4px);
+        }
+        .formBox {
+          label {
+            color: #fff;
+          }
+          input {
+            border: solid 1px #fff;
+            background: none;
+            color: #fff;
+            &.bgWhite {
+              background: #fff;
+              color: #444;
+            }
+          }
+        }
+      }
+    }
+    .tableBox {
+      max-width: 100%;
+      margin-bottom: 15px;
+      table {
+        @extend .table;
+        margin: 0px;
+        th {
+          text-align: left;
+        }
+      }
+    }
+  }
+}

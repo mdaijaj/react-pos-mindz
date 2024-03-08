@@ -1,0 +1,47 @@
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-calendars/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-react-grids/styles/bootstrap4.css";
+@import "../node_modules/@syncfusion/ej2-layouts/styles/bootstrap4.css";
+.e-grid .e-ungroupbutton.e-icon-hide::before,
+.e-grid-menu .e-ungroupbutton.e-icon-hide::before {
+  content: "\e7fc" !important;
+}
+.e-grid .e-excelexport::before, .e-grid-menu .e-excelexport::before {
+  content: '\e242' !important;
+}
+.e-grid .e-search-icon::before, .e-grid-menu .e-search-icon::before {
+  content: '\e993'!important;
+}
+.e-grid .e-ccsearch-icon::before, .e-grid-menu .e-ccsearch-icon::before {
+  content: '\e993'!important;
+}
+.icon_excelD{
+  position: relative;
+}
+.icon_excelD::after{
+  font-family: "e-icons";
+    font-style: normal;
+    font-feature-settings: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 1;
+    text-transform: none;
+  content: '\e242' !important;
+}
+.formbox select {
+  width: 100%;
+  border: solid 1 px #e1e1e1;
+  outline: none;
+  padding: 5 px 15 px;
+  border-radius: 5 px;
+  -webkit-border-radius: 5 px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  height: 38 px;
+}

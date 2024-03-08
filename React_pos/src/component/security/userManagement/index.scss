@@ -1,0 +1,75 @@
+@import "../../../variable.scss";
+
+.userManagement {
+  @extend .tabViewBox;
+  .userManagementIn {
+    display: block;
+    padding: 0px 15px;
+    .autoComp {
+      .formBox {
+        @extend .inputBox;
+        margin-bottom: 25px;
+        .MuiInput-formControl {
+          padding-right: inherit;
+          &::before {
+            display: none !important;
+          }
+          &::after {
+            display: none !important;
+          }
+          .MuiAutocomplete-input {
+            box-sizing: border-box;
+            background-color: #fff;
+          }
+        }
+        &.error {
+          input {
+            border: solid 1px #ff0000;
+          }
+        }
+      }
+    }
+    .box {
+      padding: 25px 15px;
+      margin-bottom: 15px;
+      &.greyBg {
+        background-color: $lightBg;
+        @include border-radius(4px);
+      }
+      .col {
+        .errorShow {
+          color: #ff0000;
+          padding: 8px 0px;
+        }
+      }
+      .formBox {
+        @extend .inputBox;
+        margin-bottom: 10px;
+        position: relative;
+        &.error{
+          select{
+            border: solid 1px #ff6161;
+          }
+        }
+        textarea{
+          width: 100%;
+          height: 80px;
+          resize: none;
+         outline: none;
+        padding: 15px 15px;
+        @include border-radius(5px);
+        border: solid 1px #e1e1e1;
+        }
+      }
+    }
+    .mt-47{
+      margin-top:45px;
+    }
+    h3{
+      margin: 5px 0px 10px;
+      font-size: 18px;
+      padding-bottom: 15px;
+      border-bottom: solid 1px #e6e6e6;
+    }
+  }
+}

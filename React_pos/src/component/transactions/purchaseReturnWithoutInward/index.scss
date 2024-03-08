@@ -1,0 +1,83 @@
+@import "../../../variable.scss";
+.purchaseRWI {
+  @extend .tabViewBox;
+  margin-bottom: 15px;
+  .purchaseRWIIn {
+    padding: 0 15px;
+    .autoComp {
+      .formBox {
+        @extend .inputBox;
+        .MuiInput-formControl {
+          padding-right: inherit;
+          &::before {
+            display: none !important;
+          }
+          &::after {
+            display: none !important;
+          }
+          .MuiAutocomplete-input {
+            box-sizing: border-box;
+            background-color: #fff;
+          }
+        }
+        &.error {
+          input {
+            border: solid 1px #ff0000;
+          }
+        }
+      }
+    }
+    .box {
+      padding: 25px 15px;
+      margin-bottom: 15px;
+      &.greyBg {
+        background-color: $lightBg;
+        @include border-radius(4px);
+      }
+
+      .formBox {
+        @extend .inputBox;
+        position: relative;
+        // .calIcon {
+        //   position: absolute;
+        //   right: 13px;
+        //   top: 45px;
+        //   z-index: 9;
+        //   pointer-events: none;
+        // }
+        &.mb-0 {
+          margin-bottom: 0px;
+        }
+        .MuiInput-formControl {
+          padding-right: inherit;
+          &::before {
+            display: none !important;
+          }
+          &::after {
+            display: none !important;
+          }
+          .MuiAutocomplete-input {
+            box-sizing: border-box;
+          }
+        }
+        .react-datepicker-wrapper {
+          width: 100%;
+        }
+        &.error {
+          input {
+            border: solid 1px #ff0000;
+          }
+        }
+      }
+    }
+    .tableBox {
+      table {
+        @extend .table;
+        margin: 0px;
+        td {
+          height: 50px;
+        }
+      }
+    }
+  }
+}

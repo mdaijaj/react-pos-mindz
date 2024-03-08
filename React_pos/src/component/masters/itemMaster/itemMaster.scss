@@ -1,0 +1,80 @@
+@import "../../../variable.scss";
+
+.tabBox {
+  @extend .tabViewBox;
+  &.withsubtab{
+    min-height: 260px;
+    margin-bottom: 15px;
+  }
+  .required {
+    color: red;
+    font-size: larger;
+    position: relative;
+    margin-left: 3px;
+    top: 0px;
+    line-height: 1px;
+  }
+  
+.box{
+    width: 100%;
+    padding: 20px 20px;
+    .formBox{
+      @extend .inputBox;
+      &.autoComp {
+        .MuiInputBase-root {
+          padding: 0px;
+        }
+        .MuiInputBase-input {
+          box-sizing: border-box;
+          border: none;
+        }
+        &.error {
+          input {
+            border: solid 1px $btnRed;
+          }
+        }
+      }
+    }
+    .checkboxNew{
+      display: inline-block;
+      margin-top:15px;
+    }
+    
+}
+}
+.subtabview{
+  float: left;
+  width: 100%;
+  ul{
+    padding-left: 0px;
+    margin: 0;
+    margin-top: 25px;
+    li{
+      display: inline-block;
+    cursor: pointer;
+    background-color: #1a5f9e;
+    text-align: center;
+    padding: 0px 15px;
+    height: 2.5rem;
+    line-height: 40px;
+    color: #fff;
+    font-size: 0.9rem;
+    &.active{
+      border: solid 1px #e1e1e1;
+    text-align: center;
+    line-height: 39px;
+    padding: 0px 15px 0px 15px;
+    background-color: transparent;
+    position: relative;
+    color: #2065b8;
+    border-bottom: 0;
+    cursor: inherit;
+    }
+    @include border-radius(12px 12px 0px 0px);
+      &:first-child {
+        border-right: none;
+    }
+    }
+  }
+}
+

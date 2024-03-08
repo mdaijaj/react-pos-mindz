@@ -1,0 +1,96 @@
+@import "../../../variable.scss";
+
+.BrowserTabs {
+  float: left;
+  width: 100%;
+
+  ul {
+    padding-left: 0px;
+    margin: 0;
+    margin-top: 25px;
+
+    li {
+      display: inline-block;
+      cursor: pointer;
+      background-color: #1a5f9e;
+      text-align: center;
+      padding: 0px 15px;
+      height: 2.5rem;
+      line-height: 40px;
+      color: #fff;
+      font-size: 0.9rem;
+      border-right: solid 1px #d2eaff;
+      @include border-radius(12px 12px 0px 0px);
+      @media screen and(max-width:992px) {
+        display: none;
+      }
+      &:first-child {
+        border-right: none;
+      }
+      &:last-child {
+        border-right: none;
+      }
+      span {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      &.active {
+        border: solid 1px $input-border-color;
+        text-align: center;
+        line-height: 39px;
+        padding: 0px 45px 0px 15px;
+        background-color: transparent;
+        position: relative;
+        color: $textBlue;
+        border-bottom: 0;
+        cursor: inherit;
+        &::after {
+          content: "";
+          background-color: #ffffff;
+          height: 3px;
+          position: absolute;
+          bottom: -2px;
+          width: 100%;
+          left: 0;
+        }
+        button.closeTab {
+          background: none;
+          border: none;
+          position: absolute;
+          width: 25px;
+          height: 25px;
+          top: 11px;
+          right: 6px;
+          outline: none;
+          cursor: pointer;
+          &::after {
+            content: "";
+            width: 2px;
+            height: 15px;
+            top: 5px;
+            left: 50%;
+            margin-left: -1px;
+            position: absolute;
+            background-color: $btnRed;
+            @include rotate(-45deg);
+          }
+          &::before {
+            content: "";
+            width: 2px;
+            height: 15px;
+            top: 5px;
+            left: 50%;
+            margin-left: -1px;
+            position: absolute;
+            background-color: $btnRed;
+            @include rotate(45deg);
+          }
+        }
+        @media screen and(max-width:992px) {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}

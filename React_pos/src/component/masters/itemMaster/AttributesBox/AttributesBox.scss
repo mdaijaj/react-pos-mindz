@@ -1,0 +1,39 @@
+
+@import "../../../../variable.scss";
+
+.AttributeFlex{
+    display: flex;
+    justify-content: space-between;
+    .topMenu{
+       ul{
+           padding-left: 0px;
+           text-align: left;
+           margin: 0;
+           li{
+               display: inline;
+               
+               .MuiIconButton-root{
+
+               color: #186BAC;
+               }
+               &:nth-last-child(3){
+                   font-size: 12px;
+                   color: #9F9F9F;
+                   font-style: italic;
+
+               }
+               &:nth-last-child(1){
+                border: solid 1px $input-border-color;
+                @include border-radius(4px);
+                padding: .2rem;
+       
+                display: inline-block;
+               }
+           }
+       }
+        h2{
+            font-size: 1.5rem;
+            margin-top: 14px;
+        }
+    }
+}

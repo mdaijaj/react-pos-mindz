@@ -1,0 +1,47 @@
+@import "../../../variable.scss";
+.formBox {
+  @extend .inputBox;
+  .react-datepicker-wrapper {
+    width: 100%;
+  }
+}
+.flterSection {
+  display: block;
+  padding: 10px 15px;
+}
+.report-master-form {
+  padding: 0px 15px 10px;
+}
+.fltr_Submit {
+  padding: 8px 8px;
+  background-color: #1960aa;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  height: 36px;
+  margin-top: 19px;
+  float:left;
+  cursor: pointer;
+}
+.download_excel {
+  padding: 8px 8px;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 18px;
+  height: 36px;
+  margin-top: 19px;
+  cursor: pointer;
+  float:left;
+  margin-left:8px;
+}
+.download_excel.grey{
+  background-color: #b6b8b6;
+}
+.download_excel.green{
+  background-color: #67d46d;
+}
+.errorShow {
+  padding: 15px 0px;
+  color: #f00;
+}

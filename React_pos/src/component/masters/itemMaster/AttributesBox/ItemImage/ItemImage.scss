@@ -1,0 +1,31 @@
+
+@import '../../../../../variable.scss';
+
+.ItemImage {
+    .MuiFormControlLabel-root{
+        margin-top: -10px;
+    }
+
+    .file{
+        position: relative;
+        p{
+            position: absolute;
+            cursor: pointer;
+            top: -20px;
+            z-index: -1;
+            color: #186BAC;
+            font-size: 1.1rem;
+        }
+
+        input{
+            border: 0;
+            padding: 0;
+            opacity: 0;
+            width: 100px;
+         
+            cursor: pointer;
+        }
+
+    }
+
+}

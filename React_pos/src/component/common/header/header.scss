@@ -1,0 +1,292 @@
+@import "../../../variable.scss";
+.wrapper.active {
+  .topHeader {
+    width: calc(100% - 65px);
+  }
+}
+.topHeader {
+  width: calc(100% - 250px);
+  background-color: #ffffff;
+  padding: 10px 20px;
+  position: fixed;
+  z-index: 99;
+  transition: 0.2s;
+  @media screen and(max-width:992px) {
+    width: calc(100% - 60px);
+  }
+  .leftDivide {
+    display: flex;
+    .toggleNav {
+      width: 40px;
+      height: 40px;
+      background-color: #1dd46b;
+      margin-right: 8px;
+      @include border-radius(80%);
+      cursor: pointer;
+      position: relative;
+      span {
+        width: 20px;
+        height: 2px;
+        background-color: #fff;
+        position: absolute;
+        top: 19px;
+        left: 10px;
+        &::before {
+          content: "";
+          width: 100%;
+          height: 2px;
+          background-color: #fff;
+          position: absolute;
+          top: -5px;
+          left: 0px;
+        }
+        &::after {
+          content: "";
+          width: 100%;
+          height: 2px;
+          background-color: #fff;
+          position: absolute;
+          top: 5px;
+          left: 0px;
+        }
+      }
+      @media screen and(max-width:992px) {
+        display: none;
+      }
+    }
+    .emailSection {
+      padding: 11px 0px 0px;
+      ul {
+        padding-left: 0;
+        margin: 0;
+        display: flex;
+        li {
+          display: flex;
+          font-size: 0.9rem;
+          color: #1d1d1d;
+          margin-right: 15px;
+          img {
+            max-height: 20px;
+            margin-right: 4px;
+          }
+          span {
+            margin-right: 0.5rem;
+          }
+        }
+      }
+    }
+
+    .ulCalender {
+      padding: 6px 0px 0px;
+      margin: 0px 30px;
+      ul {
+        padding-left: 0px;
+        margin: 0;
+        text-align: center;
+        display: flex;
+        list-style-type: none;
+        li {
+          padding: 0px 5px;
+          .calIcon {
+            max-height: 17px;
+            margin-top: 5px;
+          }
+          span {
+            color: #1a5f9e;
+            font-size: 0.9rem;
+            padding-top: 4px;
+            display: block;
+          }
+          input {
+            // width: 100%;
+            max-width: 80px;
+            border: solid 1px $input-border-color;
+            height: 28px;
+            @include border-radius(5px);
+            outline: none;
+            padding: 3px 4px;
+            font-family: $font-regular;
+            font-size: 0.7rem;
+            color: #1d1d1d;
+            text-align: center;
+          }
+          .calBtn {
+            width: 28px;
+            height: 28px;
+            top: -1px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            @extend .greenPlayBtn;
+          }
+        }
+      }
+    }
+    .networkStatus {
+      font-size: 14px;
+      padding-top: 12px;
+      padding-left: 21px;
+      position: relative;
+      span {
+        position: absolute;
+        width: 15px;
+        left: 0px;
+        top: 13px;
+        height: 15px;
+        @include border-radius(80%);
+        &::before {
+          content: "";
+          position: absolute;
+          top: 2px;
+          left: 2px;
+          width: 9px;
+          height: 9px;
+          @include border-radius(80%);
+        }
+        &.Online {
+          border: solid 1px #1dd46b;
+          &::before {
+            background-color: #1dd46b;
+          }
+        }
+        &.Offline {
+          border: solid 1px #c7c7c7;
+          &::before {
+            background-color: #c7c7c7;
+          }
+        }
+      }
+    }
+    .searchBox {
+      position: relative;
+      width: 40px;
+      padding-top: 0px;
+      margin-left: auto;
+      .searchBoxIn {
+        margin-left: auto;
+        border: solid 1px $input-border-color;
+        width: 40px;
+        @include border-radius(30px);
+        @include box-shadow(0 0 12px #cccccc8f);
+        height: 40px;
+        overflow: hidden;
+        position: relative;
+        input {
+          border: none;
+          outline: none;
+          position: absolute;
+          padding: 7px 50px 7px 15px;
+          height: 100%;
+          width: 100%;
+          background: transparent;
+        }
+        button {
+          position: absolute;
+          background-color: transparent;
+          border: 0px;
+          right: 4px;
+          top: 9px;
+          outline: none;
+          cursor: pointer;
+          img {
+            max-width: 18px;
+          }
+        }
+      }
+      @media screen and(max-width:992px) {
+        display: none;
+      }
+    }
+
+    .profileText {
+      margin-left: 25px;
+      margin-right: 15px;
+      padding-top: 3px;
+      position: relative;
+      @media screen and(max-width:992px) {
+        margin-left: auto;
+      }
+      ul {
+        padding-left: 0px;
+        margin: 0;
+        display: flex;
+        list-style-type: none;
+        li {
+          &.nameText {
+            padding-top: 6px;
+            padding-right: 8px;
+          }
+          .ProfileImg {
+            position: relative;
+            background-color: #1a5f9e;
+            height: 35px;
+            width: 35px;
+            text-align: center;
+            @include border-radius(100px);
+            line-height: 2.3rem;
+            margin-right: 15px;
+            img {
+              max-width: 16px;
+            }
+            cursor: pointer;
+            &::after {
+              content: "";
+              position: absolute;
+              background-color: #ff4141;
+              width: 0.6rem;
+              height: 0.6rem;
+              @include border-radius(100px);
+              top: 0.1rem;
+              right: -2px;
+            }
+            &::before {
+              content: "";
+              position: absolute;
+              width: 5px;
+              height: 5px;
+              border-left: solid 1px #444;
+              border-bottom: solid 1px #444;
+              @include rotate(-45deg);
+              right: -15px;
+              top: 15px;
+            }
+          }
+        }
+      }
+      .profileSubMenu {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        left: 0px;
+        background: #fff;
+        @include box-shadow(0px 0px 5px #ccc);
+        padding: 10px;
+        @include border-radius(5px);
+        @include transition(0.3s);
+        ul {
+          margin: 0px;
+          padding: 0px;
+          list-style-type: none;
+          li {
+            display: block;
+            width: 100%;
+            button {
+              border: none;
+              background: none;
+              display: block;
+              cursor: pointer;
+              text-align: left;
+              outline: none;
+            }
+          }
+        }
+      }
+      &:hover .profileSubMenu {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
